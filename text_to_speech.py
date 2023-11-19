@@ -46,10 +46,13 @@ if api_key is None:
     api_key = input("Enter your API key: ")
     save_api_key(api_key_file, api_key)
     print("API key registered in the file.")
+try:
+    filename = input("Enter a name for your audio file (without extension): ")
+    model = input('Enter a model, for example "tts-1": ')
+    voice = input('Enter a voice, for example "alloy": ')
+    text = input("Enter the text you want the voice to say: ")
 
-filename = input("Enter a name for your audio file (without extension): ")
-model = input('Enter a model, for example "tts-1": ')
-voice = input('Enter a voice, for example "alloy": ')
-text = input("Enter the text you want the voice to say: ")
+    text_to_speech(filename, model, voice, text, api_key)
 
-text_to_speech(filename, model, voice, text, api_key)
+except KeyboardInterrupt:
+    print("\n process canceled by the user")
