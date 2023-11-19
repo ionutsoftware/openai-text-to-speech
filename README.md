@@ -5,7 +5,7 @@ The OpenAI Text-to-Speech program is a simple console application utilizing the 
 
 ## Version History:
 - **Version 1.0:** Program Inception.
-
+- **Version 2.0:** added a gui
 ## Changelog:
 - **Version 1.0: (deprecated)**
   - Program creation, incorporating the OpenAI Text-to-Speech API to generate speech from text and save it as an MP3 file.
@@ -24,7 +24,7 @@ this version has been deprecated because don't have gui. in  the version 2.0 you
 No known bugs in the current version.
 
 - **Version 2.0:**
-  - detected a bug in compiled release. if you press cancel or pres escape, the "key.json" mades. disposed to reparation in next versions.
+  - detected a bug in compiled release. if you press cancel or pres escape, the "key.json" be create empty. disposed to reparation in next versions.
 ## Acknowledgments:
 A special thanks to the individuals contributing to the development of this program.
 
