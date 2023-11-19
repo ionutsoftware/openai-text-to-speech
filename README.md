@@ -19,8 +19,12 @@ this version has been deprecated because don't have gui. in  the version 2.0 you
   - using wxpython 4.2.1;
   - added a function to create input text fields with  the boolean multiline, to do multi-lineal or not multi lineal text fields.
 ## Bug Tracking:
+- **version 1.0:**
+
 No known bugs in the current version.
 
+- **Version 2.0:**
+  - detected a bug in compiled release. if you press cancel or pres escape, the "key.json" mades. disposed to reparation in next versions.
 ## Acknowledgments:
 A special thanks to the individuals contributing to the development of this program.
 
