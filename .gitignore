@@ -1,7 +1,6 @@
-# Ignorar el archivo key.json
 key.json
 
-# Ignorar todos los archivos .mp3 en cualquier parte del repositorio
 *.mp3
 
-compiling
+*.exe
+

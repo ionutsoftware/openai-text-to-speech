@@ -25,6 +25,8 @@ No known bugs in the current version.
 
 - **Version 2.0:**
   - detected a bug in compiled release. if you press cancel or pres escape, the "key.json" be create empty. disposed to reparation in next versions.
+  - detected an other bug. in the compiled version, the ".mp3" files not create. testing the ".py" version all runs correctly.
+
 ## Acknowledgments:
 A special thanks to the individuals contributing to the development of this program.
 
