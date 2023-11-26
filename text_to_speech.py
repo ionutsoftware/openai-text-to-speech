@@ -3,6 +3,7 @@ try:
     from openai import OpenAI
     import wx
     import json
+    import argparse
 except ImportError as e:
     show_info(None, f"Error importing modules. Error details: {str(e)}")
     exit(1)
@@ -94,13 +95,19 @@ if api_key is None:
     api_key = ask(parent=None, message="Enter your API key:", default_value="", multiline=False)
     save_api_key(api_key_file, api_key)
     show_info(None, "The API key has been registered in the key.json file")
+def main():
+    filename = ask(parent=None, message="Enter a name for your audio file (without extension):", default_value="", multiline=False)
+    model = ask(parent=None, message='Enter a model to use, for example "tts-1":', default_value="tts-1", multiline=False)
+    voice = ask(parent=None, message='Enter a voice to use for converting your text. By default, the voice is "alloy":', default_value="alloy", multiline=False)
+    text = ask(parent=None, message="Enter the text you want the voice to say:", default_value="", multiline=True)
+    if not filename or not model or not voice or not text:
+        show_info(None, "you must complete the text fields before to do you audio file.")
+        exit(1)
+    else:
+        text_to_speech(filename, model, voice, text, api_key)
 
-filename = ask(parent=None, message="Enter a name for your audio file (without extension):", default_value="", multiline=False)
-model = ask(parent=None, message='Enter a model to use, for example "tts-1":', default_value="tts-1", multiline=False)
-voice = ask(parent=None, message='Enter a voice to use for converting your text. By default, the voice is "alloy":', default_value="alloy", multiline=False)
-text = ask(parent=None, message="Enter the text you want the voice to say:", default_value="", multiline=True)
+        show_info(None, "The file has been correctly created")
 
-text_to_speech(filename, model, voice, text, api_key)
 
-show_info(None, "The file has been correctly created")
-
+if __name__=="__main__":
+    main()
