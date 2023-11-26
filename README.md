@@ -18,6 +18,8 @@ this version has been deprecated because don't have gui. in  the version 2.0 you
 - **For developers:**
   - using wxpython 4.2.1;
   - added a function to create input text fields with  the boolean multiline, to do multi-lineal or not multi lineal text fields.
+  - compiled with pyinstaller version 6.2.0
+  - used python 3.11.5
 ## Bug Tracking:
 - **version 1.0:**
 

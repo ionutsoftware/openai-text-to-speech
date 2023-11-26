@@ -102,5 +102,5 @@ text = ask(parent=None, message="Enter the text you want the voice to say:", def
 
 text_to_speech(filename, model, voice, text, api_key)
 
-show_info(None, "The file has been correctly created")
+show_info(None, f"The file has been correctly created. returned from the api: {response}")
 
